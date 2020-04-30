@@ -4,12 +4,16 @@ var des = document.getElementById('description');
 var o1 = document.getElementById('option1');
 o1.onclick = function() {
   time += cards[i].o1t;
+  gpa += cards[i].o1g;
+  pop += cards[i].o1p;
   i++;
   changeHTML(cards[i]);
 };
 var o2 = document.getElementById('option2');
 o2.onclick = function() {
   time += cards[i].o2t;
+  gpa += cards[i].o2g;
+  pop += cards[i].o2p;
   i++;
   changeHTML(cards[i]);
 };
@@ -19,7 +23,7 @@ var gpa = 3.0;
 var pop = 1;
 var c1 = {
   person : "Hot Shot Freshman",
-  description : "Challenges you to \'race\' the last 2 blocks to campus after a hard workout",
+  description : "Challenges you to 'race' the last 2 blocks to campus after a hard workout",
   option1 : "Destroy him and teach him some respect", o1t : 10, o1g : 0, o1p : 1,
   option2 : "Laugh it off and save the effort for the race", o2t : 0, o2g : 0, o2p : -1,
 }
@@ -39,7 +43,7 @@ var c3 = {
 var c4 = {
   person : "You",
   description : "You're more proud of:",
-  option1 : "Real life social stauts", o1t : 0, o1g : -.25, o1p : 1,
+  option1 : "Real life social status", o1t : 0, o1g : -.25, o1p : 1,
   option2 : "Your witty registered Letsrun handle", o2t : -5, o2g : 0, o2p : -1,
 }
 
@@ -52,14 +56,14 @@ var c5 = {
 
 var c6 = {
   person : "Teammate",
-  description : "Oh no! The track\’s closed.",
+  description : "Oh no! The track's closed.",
   option1 : "Can't beat the 'crete!", o1t : -30, o1g : 0, o1p : 0,
   option2 : "Measure out reps on the field", o2t : -20, o2g : 0, o2p : 0,
 }
 
 var c7 = {
   person : "Normie Friend",
-  description : "There\’s a big volleyball game that starts right after practice",
+  description : "There is a big volleyball game that starts right after practice",
   option1 : "I've got a lot of homework to do", o1t : 0, o1g : .5, o1p : 0,
   option2 : "Sounds fun", o2t : 0, o2g : -.25, o2p : 2,
 }
@@ -146,7 +150,7 @@ function changeHTML(o) {
   des.innerHTML = o.description;
   o1.innerHTML = o.option1;
   o2.innerHTML = o.option2;
-  t.innerHTML = Math.floor(time/60) + ":" + pad(time%60);
+  t.innerHTML = Math.floor(time/60) + ":" + pad(time%60) + " | " + gpa.toFixed(2) + " | " + pop;
   if(check.valueOf() == new String("Game Over").valueOf()) {
     o1.remove();
     o2.remove();
