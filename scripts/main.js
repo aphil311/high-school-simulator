@@ -68,31 +68,31 @@ var c7 = {
   option1 : "I've got a lot of homework to do", o1t : 0, o1g : .5, o1p : 0,
   option2 : "Sounds fun", o2t : 0, o2g : -.25, o2p : 2,
 }
-/*
 var c8 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Coach",
+  description : "You've got a decent chance to win this meet if you sit on the leader and make a move over the last 800.",
+  option1 : "Sit and Kick", o1t : 5, o1g : .25, o1p : 1,
+  option2 : "Take it from the gun", o2t : -10, o2g : 0, o2p : 0,
 }
 var c9 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Coach",
+  description : "We've got a new freshman joining the team today",
+  option1 : "Hang back and show him the route", o1t : 0, o1g : 0, o1p : -1,
+  option2 : "Establish dominance", o2t : -5, o2g : 0, o2p : 1,
 }
 var c10 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "FloTrack",
+  description : "Flotrack wants to film a workout Wednesday and your coach gives you two workout options.",
+  option1 : "8x1k at threshold", o1t : -15, o1g : 0, o1p : 2,
+  option2 : "60x400 at mile race pace", o2t : -45, o2g : 0, o2p : 3,
 }
 var c11 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Letsrun",
+  description : "Is player DONE? He absolutely bombed his last race?",
+  option1 : "Respond anonymously", o1t : 0, o1g : -.25, o1p : 0,
+  option2 : "Shake it off", o2t : 0, o2g : .25, o2p : -1,
 }
+/*
 var c12 = {
   person : "",
   description : "",
@@ -118,7 +118,7 @@ var c15 = {
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
 */
-cards = [c1, c2, c3, c4, c5, c6, c7];
+cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11];
 cards = shuffle(cards);
 var end = {
   person : "",
