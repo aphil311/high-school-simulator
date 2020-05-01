@@ -154,9 +154,21 @@ function changeHTML(o) {
   o2.innerHTML = o.option2;
   t.innerHTML = Math.floor(time/60) + ":" + pad(time%60) + " | " + gpa.toFixed(2) + " | " + pop;
   if(check.valueOf() == new String("Game Over").valueOf()) {
-    o1.remove();
-    o2.remove();
-    per.innerHTML="Game Over";
+    gameOver();
   }
+}
+function gameOver() {
+  pic.src = "assets/gameover.png";
+  per.innerHTML = "Graduated";
+  des.innerHTML - "I'm lazy and haven't written this function yet.";
+  o1.innerHTML = "Play Again";
+  o1.onclick = function() {
+    time = 1200;
+    gpa = 3;
+    pop = 1;
+    i=0;
+    changeHTML(cards[0]);
+  };
+  o2.innerHTML = "Quit";
 }
 changeHTML(cards[0]);
