@@ -92,33 +92,31 @@ var c11 = {
   option1 : "Respond anonymously", o1t : 0, o1g : -.25, o1p : 0,
   option2 : "Shake it off", o2t : 0, o2g : .25, o2p : -1,
 }
-/*
 var c12 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Normie Friend",
+  description : "Hey are you running the Turkey Trot this year?",
+  option1 : "Gobble gobble MF!", o1t : 10, o1g : 0, o1p : 1,
+  option2 : "Nope I've got a big race coming up", o2t : 0, o2g : .25, o2p : -1,
 }
 var c13 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Teacher",
+  description : "Remember we have an AP review session this Sunday",
+  option1 : "Church of the Sunday long Run", o1t : -5, o1g : -.5, o1p : 0,
+  option2 : "I'll be there", o2t : 5, o2g : .5, o2p : 0,
 }
 var c14 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Mysterious Coach",
+  description : "Mysterious coach Salberto Alazar offers to coach you",
+  option1 : "Sounds sketchy", o1t : 0, o1g : 0, o1p : 0,
+  option2 : "Sounds legit", o2t : -15, o2g : -.75, o2p : -1,
 }
 var c15 = {
-  person : "",
-  description : "",
-  option1 : "", o1t : , o1g : , o1p : ,
-  option2 : "", o2t : , o2g : 0, o2p : ,
+  person : "Teammate",
+  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
+  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
+  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
 }
-*/
-cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11];
+cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15];
 cards = shuffle(cards);
 var end = {
   person : "",
@@ -161,5 +159,4 @@ function changeHTML(o) {
     per.innerHTML="Game Over";
   }
 }
-
 changeHTML(cards[0]);

@@ -60,10 +60,17 @@ h2 {
   text-align: center;
 }
 .buttons button {
-  /*background-color: #4CAF50;  Green background */
+  background-color: #bc986a;
   padding: 10px 14px; /* Some padding */
   margin-bottom: 10px;
   cursor: pointer; /* Pointer/hand icon */
   display: block; /* Make the buttons appear below each other */
   width: 100%;
+  border: none;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: gray;
+}
+button:hover {
+  background-color: #daad86;
 }
