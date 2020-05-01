@@ -1,5 +1,6 @@
 var i = 0;
 var per = document.getElementById('person');
+var pic = document.getElementById('sprite');
 var des = document.getElementById('description');
 var o1 = document.getElementById('option1');
 o1.onclick = function() {
@@ -68,49 +69,49 @@ var c7 = {
   option2 : "Sounds fun", o2t : 0, o2g : -.25, o2p : 2,
 }
 /*
-//var c8 = {
+var c8 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c9 = {
+var c9 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c10 = {
+var c10 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c11 = {
+var c11 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c12 = {
+var c12 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c13 = {
+var c13 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c14 = {
+var c14 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
   option2 : "", o2t : , o2g : 0, o2p : ,
 }
-//var c15 = {
+var c15 = {
   person : "",
   description : "",
   option1 : "", o1t : , o1g : , o1p : ,
@@ -146,7 +147,10 @@ function pad(n) {
 }
 function changeHTML(o) {
   let check = o.description
+  let temp = "assets/" + o.person + ".png";
+  temp = temp.replace(/\s+/g, '');
   per.innerHTML = o.person;
+  pic.src = temp;
   des.innerHTML = o.description;
   o1.innerHTML = o.option1;
   o2.innerHTML = o.option2;

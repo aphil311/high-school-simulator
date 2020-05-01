@@ -35,6 +35,11 @@ div.game {
   width: 400px;
   display: inline-block;
 }
+img {
+  border-style: solid;
+  border-color: gray;
+  border-width: 3px;
+}
 h1 {
   font-family: "Fjalla One", sans-serif;
   text-align: center;
@@ -50,6 +55,7 @@ p {
   text-align: center;
 }
 h2 {
+  margin-top: 5px;
   font-family: "Fjalla One", sans-serif;
   text-align: center;
 }
