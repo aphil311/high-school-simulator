@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Run fast eat ass",
   "main": "main.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "dependencies": {
     "electron": "^8.2.5"
   },

@@ -40,28 +40,24 @@ var c3 = {
   option1 : "Former NCAA D1 still crushing PRs", o1t : 0, o1g : 0, o1p : 1,
   option2 : "Former NAIA who was 19th in conference", o2t : 0, o2g : 0, o2p : 0,
 }
-
 var c4 = {
   person : "You",
   description : "You're more proud of:",
   option1 : "Real life social status", o1t : 0, o1g : -.25, o1p : 1,
   option2 : "Your witty registered Letsrun handle", o2t : -5, o2g : 0, o2p : -1,
 }
-
 var c5 = {
   person : "You",
   description : "Summer before senior year training:",
   option1 : "TAKE NO PRISONERS 118 days straight", o1t : -60, o1g : 0, o1p : 0,
   option2 : "A measured, balance approach", o2t : -40, o2g : 0, o2p : 0,
 }
-
 var c6 = {
   person : "Teammate",
   description : "Oh no! The track's closed.",
   option1 : "Can't beat the 'crete!", o1t : -30, o1g : 0, o1p : 0,
   option2 : "Measure out reps on the field", o2t : -20, o2g : 0, o2p : 0,
 }
-
 var c7 = {
   person : "Normie Friend",
   description : "There is a big volleyball game that starts right after practice",
@@ -176,33 +172,58 @@ var c25 = {
   option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
   option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
 }
-cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20];
-cards = shuffle(cards);
-var end = {
-  person : "",
-  description : "Game Over",
-  option1 : "",
-  option2 : "",
+var end = {   // Can be placed at any index to end the game
+  person : "Game Over",
+  description : "I'm lazy and haven't written the function to tell you what happens after you graduate based on your stats",
+  option1 : "", o1t : 0, o1g : 0, o1p : 0,
+  option2 : "", o2t : 0, o2g : 0, o2p : 0,
 }
-cards.splice(21, 0, end);
+
+
+// HELPER METHODS
+
+// Just places a 0 in front of second values lower than 10
+function pad(n) {
+    return (n < 10) ? ("0" + n) : n;
+}
+
+// Places bounds on player stats and formats output
+function statsOutput(){
+  let disT=810;
+  let disG;
+  let disP=0;
+  if(time>810) {
+    disT = time;
+  }
+  if(gpa>4) {
+    disG=4;
+  }
+  else if(gpa<0) {
+    disG=0;
+  }
+  else {
+    disG=gpa;
+  }
+  if(pop>0){
+    disP=pop;
+  }
+  return Math.floor(disT/60) + ":" + pad(disT%60) + " | " + disG.toFixed(2) + " | " + disP;
+}
+
+// Shuffles the cards according to the Fisher-Yates algorithm
 function shuffle(array) {
     let counter = array.length;
-    // While there are elements in the array
     while (counter > 0) {
-        // Pick a random index
         let index = Math.floor(Math.random() * counter);
-        // Decrease counter by 1
         counter--;
-        // And swap the last element with it
         let temp = array[counter];
         array[counter] = array[index];
         array[index] = temp;
     }
     return array;
 }
-function pad(n) {
-    return (n < 10) ? ("0" + n) : n;
-}
+
+// Loads amother card into the HTML
 function changeHTML(o) {
   let check = o.description
   let temp = "assets/" + o.person + ".png";
@@ -217,27 +238,7 @@ function changeHTML(o) {
     gameOver();
   }
 }
-function statsOutput(){
-  let disT=810;
-  let disG;
-  let disP=0;
-  if(time>810) {
-    disT = time;
-  }
-  if(gpa>4) {
-    disG=4;
-  }
-  else if(gpa<0) {
-    disG=0
-  }
-  else {
-    disG=gpa;
-  }
-  if(pop>0){
-    disP=pop;
-  }
-  return Math.floor(disT/60) + ":" + pad(disT%60) + " | " + disG.toFixed(2) + " | " + disP;
-}
+// Overrides the end card
 function gameOver() {
   pic.src = "assets/gameover.png";
   per.innerHTML = "Graduated";
@@ -252,4 +253,9 @@ function gameOver() {
   };
   o2.innerHTML = "Quit";
 }
-changeHTML(cards[0]);
+
+// ACTUAL SEQUENTIAL CODE YAY
+cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20];  //Puts cards into an array
+cards = shuffle(cards);     //Shuffles the cards
+cards.splice(20, 0, end);   //Puts the end card in the 20th index
+changeHTML(cards[0]);       //Starts the game
