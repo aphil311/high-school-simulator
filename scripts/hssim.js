@@ -116,7 +116,67 @@ var c15 = {
   option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
   option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
 }
-cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15];
+var c16 = {
+  person : "Coach",
+  description : "Wow, the sun is really blinding.  Where do I turn for the freeway?",
+  option1 : "Over here", o1t : 0, o1g : -.25, o1p : -1,
+  option2 : "Over there", o2t : 0, o2g : .25, o2p : 1,
+}
+var c17 = {
+  person : "Normie Friend",
+  description : "Hey! I just went for a run to train for soccer and now there's this little crown on my strava",
+  option1 : "Be a good friend and explain what a CR is", o1t : 0, o1g : 0, o1p : 1,
+  option2 : "Segment sniping session", o2t : -5, o2g : 0, o2p : 0,
+}
+var c18 = {
+  person : "Parents",
+  description : "We called the missing person hotline because you were gone so long running",
+  option1 : "Cool", o1t : 0, o1g : -.25, o1p : 0,
+  option2 : "Whatever", o2t : 0, o2g : 0, o2p : -1,
+}
+var c19 = {
+  person : "FloTrack",
+  description : "Posts a video of you throwing up in the middle of a race and makes it a meme",
+  option1 : "Deny it was you", o1t : 0, o1g : -.25, o1p : -1,
+  option2 : "Cry", o2t : 0, o2g : 0, o2p : 0,
+}
+var c20 = {
+  person : "Letsrun",
+  description : "A post gets number 6 on trending that claims you are doping",
+  option1 : "Mail RoJo your urine", o1t : -10, o1g : 0, o1p : 1,
+  option2 : "Make your dad write an angry post", o2t : 5, o2g : -.25, o2p : 0,
+}
+var c21 = {
+  person : "Teammate",
+  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
+  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
+  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+}
+var c22 = {
+  person : "Teammate",
+  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
+  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
+  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+}
+var c23 = {
+  person : "Teammate",
+  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
+  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
+  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+}
+var c24 = {
+  person : "Teammate",
+  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
+  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
+  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+}
+var c25 = {
+  person : "Teammate",
+  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
+  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
+  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+}
+cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20];
 cards = shuffle(cards);
 var end = {
   person : "",
@@ -124,7 +184,7 @@ var end = {
   option1 : "",
   option2 : "",
 }
-cards.push(end);
+cards.splice(21, 0, end);
 function shuffle(array) {
     let counter = array.length;
     // While there are elements in the array
