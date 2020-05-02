@@ -152,10 +152,31 @@ function changeHTML(o) {
   des.innerHTML = o.description;
   o1.innerHTML = o.option1;
   o2.innerHTML = o.option2;
-  t.innerHTML = Math.floor(time/60) + ":" + pad(time%60) + " | " + gpa.toFixed(2) + " | " + pop;
+  t.innerHTML = statsOutput();
   if(check.valueOf() == new String("Game Over").valueOf()) {
     gameOver();
   }
+}
+function statsOutput(){
+  let disT=810;
+  let disG;
+  let disP=0;
+  if(time>810) {
+    disT = time;
+  }
+  if(gpa>4) {
+    disG=4;
+  }
+  else if(gpa<0) {
+    disG=0
+  }
+  else {
+    disG=gpa;
+  }
+  if(pop>0){
+    disP=pop;
+  }
+  return Math.floor(disT/60) + ":" + pad(disT%60) + " | " + disG.toFixed(2) + " | " + disP;
 }
 function gameOver() {
   pic.src = "assets/gameover.png";
