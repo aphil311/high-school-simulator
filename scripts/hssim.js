@@ -25,7 +25,7 @@ o2.onclick = function() {
     changeHTML(cards[i]);
   }
   else {
-    document.location.href = "../index.html"
+    document.location.href = "./index.html"
   }
 };
 var t = document.getElementById('time');
@@ -94,7 +94,7 @@ var c10 = {
 }
 var c11 = {
   person : "Letsrun",
-  description : "Is player DONE? He absolutely bombed his last race?",
+  description : "Is " + name + " DONE? He absolutely bombed his last race?",
   option1 : "Respond anonymously", o1t : 0, o1g : -.25, o1p : 0,
   option2 : "Shake it off", o2t : 0, o2g : .25, o2p : -1,
 }
@@ -245,7 +245,6 @@ function changeHTML(o) {
   o2.innerHTML = o.option2;
   t.innerHTML = statsOutput();
 }
-
 
 function newGame() {
   i=0;
