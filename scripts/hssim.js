@@ -154,33 +154,33 @@ var c20 = {
 }
 var c21 = {
   person : "Teammate",
-  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
-  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
-  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+  description : "Hey what route are we doing?",
+  option1 : "Same one we always do", o1t : -5, o1g : 0, o1p : -1,
+  option2 : "Let's mix it up", o2t : -10, o2g : 0, o2p : 0,
 }
 var c22 = {
-  person : "Teammate",
-  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
-  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
-  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+  person : "Parents",
+  description : "We think you're beginning to develop an unhealthy obsession with Eliud Kipchoge",
+  option1 : "You're right... *begins taking apart altar*", o1t : 10, o1g : .5, o1p : 1,
+  option2 : "\"Passion is a choice\" -Kipchoge", o2t : 0, o2g : -.5, o2p : -2,
 }
 var c23 = {
-  person : "Teammate",
-  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
-  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
-  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+  person : "Mysterious Coach",
+  description : "Hey man I got this gum that'll give you even more energy than RunGum",
+  option1 : "Sir that is a bag of cocaine", o1t : 0, o1g : .25, o1p : 0,
+  option2 : "I'll have a lifetime supply please", o2t : -35, o2g : -1, o2p : -2,
 }
 var c24 = {
-  person : "Teammate",
-  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
-  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
-  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+  person : "Teacher",
+  description : "You've got to stop stretching during class",
+  option1 : "Fitness is a lifestyle", o1t : -5, o1g : 0, o1p : -1,
+  option2 : "Fine.", o2t : 0, o2g : .5, o2p : 0,
 }
 var c25 = {
-  person : "Teammate",
-  description : "The biggest social influencer in school just posted a picture of you wearing off brand running shoes from 7th grade",
-  option1 : "Uninstall all social media", o1t : 0, o1g : .5, o1p : 0,
-  option2 : "Threatening Instagram post", o2t : 0, o2g : -.25, o2p : -2,
+  person : "Normie Friend",
+  description : "Dude, why are your shorts so short?",
+  option1 : "Peak athletic performance", o1t : -15, o1g : 0, o1p : -1,
+  option2 : "The ladies", o2t : 0, o2g : 0, o2p : -2,
 }
 var end = {   // Can be placed at any index to end the game
   person : "Game Over",
@@ -251,7 +251,7 @@ function newGame() {
   pop=1;
   gpa=3;
   time=1200;
-  cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20];  //Puts cards into an array
+  cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25];  //Puts cards into an array
   cards = shuffle(cards);     //Shuffles the cards
   cards.splice(20, 0, end);   //Puts the end card in the 20th index
   changeHTML(cards[0]);       //Starts the game
