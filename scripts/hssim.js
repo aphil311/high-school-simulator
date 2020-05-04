@@ -4,19 +4,29 @@ var pic = document.getElementById('sprite');
 var des = document.getElementById('description');
 var o1 = document.getElementById('option1');
 o1.onclick = function() {
-  time += cards[i].o1t;
-  gpa += cards[i].o1g;
-  pop += cards[i].o1p;
-  i++;
-  changeHTML(cards[i]);
+  if(i!=20){
+    time += cards[i].o1t;
+    gpa += cards[i].o1g;
+    pop += cards[i].o1p;
+    i++;
+    changeHTML(cards[i]);
+  }
+  else{
+    newGame();
+  }
 };
 var o2 = document.getElementById('option2');
 o2.onclick = function() {
-  time += cards[i].o2t;
-  gpa += cards[i].o2g;
-  pop += cards[i].o2p;
-  i++;
-  changeHTML(cards[i]);
+  if(i!=20){
+    time += cards[i].o2t;
+    gpa += cards[i].o2g;
+    pop += cards[i].o2p;
+    i++;
+    changeHTML(cards[i]);
+  }
+  else {
+    document.location.href = "../index.html"
+  }
 };
 var t = document.getElementById('time');
 var time = 1200;
@@ -175,8 +185,8 @@ var c25 = {
 var end = {   // Can be placed at any index to end the game
   person : "Game Over",
   description : "I'm lazy and haven't written the function to tell you what happens after you graduate based on your stats",
-  option1 : "", o1t : 0, o1g : 0, o1p : 0,
-  option2 : "", o2t : 0, o2g : 0, o2p : 0,
+  option1 : "New Game", o1t : 0, o1g : 0, o1p : 0,
+  option2 : "Quit", o2t : 0, o2g : 0, o2p : 0,
 }
 
 
@@ -234,28 +244,18 @@ function changeHTML(o) {
   o1.innerHTML = o.option1;
   o2.innerHTML = o.option2;
   t.innerHTML = statsOutput();
-  if(check.valueOf() == new String("Game Over").valueOf()) {
-    gameOver();
-  }
-}
-// Overrides the end card
-function gameOver() {
-  pic.src = "assets/gameover.png";
-  per.innerHTML = "Graduated";
-  des.innerHTML - "I'm lazy and haven't written this function yet.";
-  o1.innerHTML = "Play Again";
-  o1.onclick = function() {
-    time = 1200;
-    gpa = 3;
-    pop = 1;
-    i=0;
-    changeHTML(cards[0]);
-  };
-  o2.innerHTML = "Quit";
 }
 
-// ACTUAL SEQUENTIAL CODE YAY
-cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20];  //Puts cards into an array
-cards = shuffle(cards);     //Shuffles the cards
-cards.splice(20, 0, end);   //Puts the end card in the 20th index
-changeHTML(cards[0]);       //Starts the game
+
+function newGame() {
+  i=0;
+  pop=1;
+  gpa=3;
+  time=1200;
+  cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20];  //Puts cards into an array
+  cards = shuffle(cards);     //Shuffles the cards
+  cards.splice(20, 0, end);   //Puts the end card in the 20th index
+  changeHTML(cards[0]);       //Starts the game
+}
+
+newGame();
