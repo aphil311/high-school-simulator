@@ -72,6 +72,29 @@ h2 {
   outline-width: 2px;
   outline-color: gray;
 }
+#label {
+  font-family: "Share Tech Mono", monospace;
+}
+#quote {
+  font-family: "Fjalla One", sans-serif;
+  margin-top: 0px;
+}
+#name {
+  background-color: #fbeec1;
+  border: none;
+  outline-offset: 5px;
+  outline-color: gray;
+  outline-style: solid;
+  outline-width: 1px;
+}
+#a-button {
+  background-color: #bc986a;
+  border: none;
+  cursor: pointer;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: gray;
+}
 button:hover {
   background-color: #daad86;
 }
