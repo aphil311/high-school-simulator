@@ -240,10 +240,95 @@ function changeHTML(o) {
   temp = temp.replace(/\s+/g, '');
   per.innerHTML = o.person;
   pic.src = temp;
-  des.innerHTML = o.description;
+  if(i!=20) {
+    des.innerHTML = o.description;
+  }
+  else {
+    des.innerHTML = futureWriter();
+  }
   o1.innerHTML = o.option1;
   o2.innerHTML = o.option2;
   t.innerHTML = statsOutput();
+}
+
+function futureWriter() {
+  let sentence = "";
+  if (time<=810) {
+    sentence = "Congrats! You broke the national record.";
+  }
+  else if (time<=840&&Math.floor(gpa)==1) {
+    sentence = "You go pro for Tinman but can't read.";
+  }
+  else if (time<=885&&Math.floor(gpa)==1) {
+    sentence = "You win NXN, and have a successful freshmen year of college running before dropping out.";
+  }
+  else if (time<=915&&Math.floor(gpa)==1) {
+    sentence = "You win Foot Locker but no D1 coaches can convince their college to accept you.";
+  }
+  else if (time<=960&&Math.floor(gpa)==1) {
+    sentence = "You win state and enroll at full sail online university.";
+  }
+  else if (time<=1020&&Math.floor(gpa)==1) {
+    sentence = "You win conference, and take a gap year.";
+  }
+  else if (time>1020&&Math.floor(gpa)==1) {
+    sentence = "You are banished to lurking Letsrun.";
+  }
+  else if (time<=840&&Math.floor(gpa)==2) {
+    sentence = "You go pro for OTC and are relatively successful after retiring.";
+  }
+  else if (time<=885&&Math.floor(gpa)==2) {
+    sentence = "You win NXN, and do very well at NAU.";
+  }
+  else if (time<=915&&Math.floor(gpa)==2) {
+    sentence = "You win Foot Locker go to Ole Miss where you are fairly successful.";
+  }
+  else if (time<=960&&Math.floor(gpa)==2) {
+    sentence = "You win state and go D2.";
+  }
+  else if (time<=1020&&Math.floor(gpa)==2) {
+    sentence = "You win conference, quit running and go to an average college.";
+  }
+  else if (time>1020&&Math.floor(gpa)==2) {
+    sentence = "You are banished to lurking Letsrun from your college dorm.";
+  }
+  else if (time<=840&&Math.floor(gpa)>2) {
+    sentence = "You go pro for BTC and are very successful after retiring.";
+  }
+  else if (time<=885&&Math.floor(gpa)>2) {
+    sentence = "You win NXN, and do very well at Stanford.";
+  }
+  else if (time<=915&&Math.floor(gpa)>2) {
+    sentence = "You win Foot Locker go to Harvard where you are fairly successful.";
+  }
+  else if (time<=960&&Math.floor(gpa)>2) {
+    sentence = "You win state and go to a very academically strong D3.";
+  }
+  else if (time<=1020&&Math.floor(gpa)>2) {
+    sentence = "You win conference, and go a a top college where you have your running dreams crushed.";
+  }
+  else if (time>1020&&Math.floor(gpa)>2) {
+    sentence = "You are banished to lurking Letsrun from your $74,000/year college dorm.";
+  }
+  else {
+    sentence = "Congrats you broke my function";
+  }
+  if(pop < 2) {
+    sentence += " Your friends hate you.";
+  }
+  else if (pop < 5) {
+    sentence += " Your friends think you're weird."
+  }
+  else if (pop < 7) {
+    sentence += " You have friends. Congrats."
+  }
+  else if (pop < 9) {
+    sentence += " You have friends... and they actually accept you."
+  }
+  else {
+    sentence += " You are quite popular congrats no one cares."
+  }
+  return sentence;
 }
 
 function newGame() {
