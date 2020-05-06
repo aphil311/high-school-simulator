@@ -81,8 +81,9 @@ function shuffle(array) {
 // Loads amother card into the HTML
 function changeHTML(o) {
   let check = o.description
-  let temp = "assets/" + o.person + ".png";
+  let temp = "../assets/" + o.person + ".png";
   temp = temp.replace(/\s+/g, '');
+  temp=temp.toLowerCase();
   per.innerHTML = o.person;
   pic.src = temp;
   if(i!=20) {
@@ -154,6 +155,9 @@ function futureWriter() {
   }
   else if (time>1020&&Math.floor(gpa)>2) {
     sentence = "You are banished to lurking Letsrun from your $74,000/year college dorm.";
+  }
+  else if (gpa<1) {
+    sentence = "Looks like you'll be repeating senior year."
   }
   else {
     sentence = "Congrats you broke my function";
