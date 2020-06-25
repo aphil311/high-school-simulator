@@ -1,3 +1,6 @@
+//-----------\\
+// Variables \\
+//-----------\\
 var i = 0;
 var per = document.getElementById('person');
 var pic = document.getElementById('sprite');
@@ -8,6 +11,10 @@ o1.onclick = function() {
     time += cards[i].o1t;
     gpa += cards[i].o1g;
     pop += cards[i].o1p;
+    inj += cards[i].o1i;
+    if(inj >= 10) {
+      cards.splice(i+1, 1, injury);
+    }
     i++;
     changeHTML(cards[i]);
   }
@@ -21,6 +28,7 @@ o2.onclick = function() {
     time += cards[i].o2t;
     gpa += cards[i].o2g;
     pop += cards[i].o2p;
+    inj += cards[i].o2i;
     i++;
     changeHTML(cards[i]);
   }
@@ -32,8 +40,7 @@ var t = document.getElementById('time');
 var time = 1200;
 var gpa = 3.0;
 var pop = 1;
-
-
+var inj = 0;
 
 // HELPER METHODS
 
@@ -78,10 +85,10 @@ function shuffle(array) {
     return array;
 }
 
-// Loads amother card into the HTML
+// Loads another card into the HTML
 function changeHTML(o) {
   let check = o.description
-  let temp = "../assets/" + o.person + ".png";
+  let temp = "assets/" + o.person + ".png";   // Remember to use relative address on file hosting website
   temp = temp.replace(/\s+/g, '');
   temp=temp.toLowerCase();
   per.innerHTML = o.person;
@@ -180,11 +187,14 @@ function futureWriter() {
   return sentence;
 }
 
+
+// MAIN METHOD
 function newGame() {
   i=0;
   pop=1;
   gpa=3;
   time=1200;
+  inj=0;
   cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25];  //Puts cards into an array
   cards = shuffle(cards);     //Shuffles the cards
   cards.splice(20, 0, end);   //Puts the end card in the 20th index
