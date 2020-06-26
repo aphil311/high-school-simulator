@@ -139,7 +139,7 @@ var c23 = {
 var c24 = {
   person : "Teacher",
   description : "You've got to stop stretching during class",
-  option1 : "Fitness is a lifestyle", o1t : -5, o1g : 0, o1p : -1, o1i : 0,
+  option1 : "Fitness is a lifestyle", o1t : -5, o1g : 0, o1p : -1, o1i : -2,
   option2 : "Fine.", o2t : 0, o2g : .5, o2p : 0, o2i : 1,
 }
 var c25 = {
@@ -148,10 +148,79 @@ var c25 = {
   option1 : "Peak athletic performance", o1t : -15, o1g : 0, o1p : -1, o1i : 0,
   option2 : "The ladies", o2t : 0, o2g : 0, o2p : -2, o2i : 0,
 }
+var c26 = {
+  person : "Trainer",
+  description : "Looks like you have shin splints",
+  option1 : "Take a week off", o1t : 20, o1g : 0, o1p : -1, o1i : -5,
+  option2 : "Can't stop me old man ", o2t : 0, o2g : -.25, o2p : 1, o2i : 3,
+}
+var c27 = {
+  person : "Parents",
+  description : "Do you feel the KT tape stretching your hamstring?",
+  option1 : "No", o1t : 0, o1g : 0, o1p : -1, o1i : -2,
+  option2 : "Lie so that you can leave", o2t : 0, o2g : 0, o2p : 2, o2i : 1,
+}
+var c28 = {
+  person : "Hey, I broke one of your strava CRs",
+  description : "Hey, I broke one of your strava CRs",
+  option1 : "Good for you!", o1t : , o1g : , o1p : , o1i : ,
+  option2 : "Make him pay for his sins", o2t : , o2g : , o2p : , o2i : ,
+}
+var c29 = {
+  person : "Teacher",
+  description : "I ran a half marathon last weekend",
+  option1 : "Nice, maybe you'll get it down to 47 hours next time", o1t : 0, o1g : -1, o1p : 0, o1i : 0,
+  option2 : "Congrats!", o2t : 0, o2g : .25, o2p : 1, o2i : 0,
+}
+var c30 = {
+  person : "Hot Shot Freshman",
+  description : "*Absolutely storms the warmup in 6:20*",
+  option1 : "Tell him to try going sub 6 next time", o1t : 0, o1g : 0, o1p : 1, o1i : 0,
+  option2 : "Tell him to save it for the workout", o2t : 0, o2g : .25, o2p : -1, o2i : 0,
+}
+var c31 = {
+  person : "Coach",
+  description : "I hear the other team's got a real stud. He's about 30 seconds faster than you.",
+  option1 : "Race smart and try to stay in it", o1t : -30, o1g : .25, o1p : 0, o1i : 1,
+  option2 : "Put a few rocks in your pocket for later", o2t : 0, o2g : 0, o2p : 4, o2i : 0,
+}
+var c32 = {
+  person : "You",
+  description : "You have a race in 2 weeks and you haven't trained at all",
+  option1 : "Sandbag before the race and open in 50", o1t : 10, o1g : 0, o1p : -1, o1i : 1,
+  option2 : "Train and hope for the best", o2t : -10, o2g : , o2p : 0, o2i : 0,
+}
+var c33 = {
+  person : "Teammate",
+  description : "Challenges you to race the last stride",
+  option1 : "No thanks", o1t : -5, o1g : .25, o1p : -1, o1i : 0,
+  option2 : "End his career in six seconds", o2t : -10, o2g : 0, o2p : 2, o2i : 1,
+}
+var c34 = {
+  person : "Teammate",
+  description : "Won't run because DOMS is apparently an injury now",
+  option1 : "Give me a sledgehammer I'll show you injured", o1t : 0, o1g : 0, o1p : -2, o1i : 0,
+  option2 : "Tell him you hope it gets better", o2t : 0, o2g : 0, o2p : 1, o2i : 0,
+}
+var c35 = {
+  person : "Parents",
+  description : "We think you may have an unhealthy relationship with Brooks Adrenalines",
+  option1 : "I guess I could throw a Ravenna in the rotation", o1t : -10, o1g : .25, o1p : 0, o1i : -1,
+  option2 : "12mm drop or die", o2t : 0, o2g : 0, o2p : -1, o2i : -1,
+}
+/*
+~EXAMPLE CARD~
+var cxx = {
+  person : "",
+  description : "",
+  option1 : "", o1t : , o1g : , o1p : , o1i : ,
+  option2 : "", o2t : , o2g : , o2p : , o2i : ,
+}
+*/
 var injury = {   // Splices in when a runner is injured
   person : "Trainer",
   description : "Yeah your leg isn't working real good. Maybe take it easy for a few weeks",
-  option1 : "You don't know shit old man", o1t : -20, o1g : -.25, o1p : 1, o1i : -2,
+  option1 : "You don't know shit", o1t : -20, o1g : -.25, o1p : 1, o1i : -2,
   option2 : "Fine", o2t : -60, o2g : .5, o2p : -1, o2i : -10,
 }
 var end = {   // Can be placed at any index to end the game
