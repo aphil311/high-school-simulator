@@ -98,3 +98,25 @@ h2 {
 button:hover {
   background-color: #daad86;
 }
+@media only screen and (max-device-width: 600px)
+{
+  div.game {
+    font-size: 48px;
+    width: 90%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #option1 {
+    font-size: 42px;
+  }
+  #option2 {
+    font-size: 42px;
+  }
+  img {
+    height: 256px;
+    width: 256px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+}
