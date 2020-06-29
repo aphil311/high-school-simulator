@@ -12,7 +12,7 @@ o1.onclick = function() {
     gpa += cards[i].o1g;
     pop += cards[i].o1p;
     inj += cards[i].o1i;
-    if(inj >= 10) {
+    if(inj >= 10 && i<19) {
       cards.splice(i+1, 1, injury);
     }
     i++;
@@ -33,7 +33,7 @@ o2.onclick = function() {
     changeHTML(cards[i]);
   }
   else {
-    document.location.href = "./index.html"
+    document.location.href = "index.html"   // Change to relative address for web release
   }
 };
 var t = document.getElementById('time');
@@ -157,10 +157,10 @@ function futureWriter() {
   else if (time<=960&&Math.floor(gpa)>2) {
     sentence = "You win state and go to a very academically strong D3.";
   }
-  else if (time<=1020&&Math.floor(gpa)>2) {
+  else if (time<=1050&&Math.floor(gpa)>2) {
     sentence = "You win conference, and go a a top college where you have your running dreams crushed.";
   }
-  else if (time>1020&&Math.floor(gpa)>2) {
+  else if (time>1050&&Math.floor(gpa)>2) {
     sentence = "You are banished to lurking Letsrun from your $74,000/year college dorm.";
   }
   else if (gpa<1) {
@@ -195,9 +195,9 @@ function newGame() {
   gpa=3;
   time=1200;
   inj=0;
-  cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25];  //Puts cards into an array
+  cards = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15, c16, c17, c18, c19, c20, c21, c22, c23, c24, c25, c26, c27, c28, c29, c30, c31, c32, c33, c34, c35];  //Puts cards into an array
   cards = shuffle(cards);     //Shuffles the cards
-  cards.splice(20, 0, end);   //Puts the end card in the 20th index
+  cards.splice(24, 0, end);   //Puts the end card in the 20th index
   changeHTML(cards[0]);       //Starts the game
 }
 
