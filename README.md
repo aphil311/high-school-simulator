@@ -1,7 +1,6 @@
 # HighSchoolSimulator
 This started as a fun project to get away from doing school but after dumping roughly 10-12 hours into it in 2 days I decided to try to flesh it out and publish it.
 ## Getting Started
-These instructions will guide you through getting the source code downloaded on to your computer so that you can run the game in your browser.
 ### Prerequisites
 This game has been tested in Google Chrome and Internet Explorer. It will work in Internet Explorer, but some CSS properties will not be supported, resulting in blurry images. Firefox has not been tested at this point.
 ### Usage
